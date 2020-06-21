@@ -1,0 +1,147 @@
+@import "variables";
+
+.profile {
+	position: relative;
+	&__arrow {
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		background: rgba(255, 255, 255, 0.3);
+		top: 20px;
+		left: 20px;
+		z-index: 100;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .5s;
+		&:hover {
+			cursor: pointer;
+			background: rgba(255, 255, 255, 0.6);
+		}
+	}
+	&__main {
+		padding: 16px 16px 30px 16px;
+		border-radius: 16px 16px 0 0;
+	}
+	&__section {
+		margin-bottom: 20px;
+	}
+	&__person {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+	}
+	&__name {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: "";
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			background: $green;
+			right: -18px;
+			top: calc(50% - 4px);
+		}
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: $main;
+		margin-bottom: 12px;
+	}
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: $main;
+	}
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__tag {
+		display: flex;
+		justify-content: space-between;
+		background: $grey-bg;
+		border-radius: 10px;
+		padding: 8px 15px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1;
+		margin: 0 8px 8px 0;
+		color: $grey-text;
+		transition: .2s;
+		.tag__title {
+			margin-left: 8px;
+		}
+		a {
+			display: flex;
+			align-items: center;
+		}
+		&_current {
+			background: $accent;
+			color: $white-text;
+		}
+		&:hover {
+			background: $accent;
+			color: $white-text;	
+		}
+	}
+	&__topic {
+		color: $grey-text;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;	
+		margin: 0 0 5px 0;
+		padding: 0;
+	}
+	&__intro {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&__verification {
+		margin-right: 12px;
+		margin-top: 2px;
+		font-size: 0;
+		line-height: 0;
+	}
+	&__report {
+		margin-top: 36px;
+		border: 1px solid $grey-text;
+		padding: 14px 5px;
+		border-radius: 8px;
+		color: $grey-text;
+		transition: .3s;
+		text-align: center;
+		&:hover {
+			cursor: pointer;
+			border-color: $grey-bg;
+		}
+	}
+	&__like {
+		margin-left: calc(50% - 25px);
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25px;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		padding: 0;
+		background: none;
+		border: none;
+		transition: .3s;
+		box-shadow: 0px 0px 5px 0px $grey-text;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 9px 0px $grey-text;
+		}
+	}
+}
